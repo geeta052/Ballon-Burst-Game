@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('assets/Symbol\ 3\ copy.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#game-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#balloon-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@keyframes grow {
+  0% {
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.balloon {
+  position: absolute;
+  cursor: pointer;
+  animation: float 5s linear infinite;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: grow 2s ease-in-out forwards;
+}
+
+.alphabet {
+  position: relative;
+  width: 60%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#pump {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#balloon-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
